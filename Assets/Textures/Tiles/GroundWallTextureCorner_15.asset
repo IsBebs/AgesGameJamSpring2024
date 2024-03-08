@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GroundTexture_01
+  m_Name: GroundWallTextureCorner_15
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: f19cd8b3d6de2c24f87faae8b2163920, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3cd82b9cd00aa940b8a1dc58457da16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
