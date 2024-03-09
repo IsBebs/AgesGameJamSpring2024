@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerAmmo : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PlayerAmmo : MonoBehaviour
     int startAmmo;
     [SerializeField]
     int MaxAmmo;
+    [SerializeField]
+    TextMeshProUGUI ammoText;
     int ammo;
 
     public int Ammo 
@@ -24,6 +27,7 @@ public class PlayerAmmo : MonoBehaviour
                 ammo = MaxAmmo;
             }
             ammo = value;
+            ammoText.text = $"Ammo:{ammo}";
         } 
     }
 
