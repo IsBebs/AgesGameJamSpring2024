@@ -9,10 +9,6 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField]
     BulletPool PlayerBulletPool;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -22,7 +18,7 @@ public class PlayerShoot : MonoBehaviour
             Vector3 mousePos = Input.mousePosition;
             Vector3 mouseWorld = GameCamera.ScreenToWorldPoint(mousePos);
             GameObject bulletObject = PlayerBulletPool.GetNextObjectInPool();
-            bulletObject.GetComponent<Bullet>().SetBulletStartValues(mouseWorld -transform.position, transform.position);
+            bulletObject.GetComponent<IBullet>().SetBulletStartValues(mouseWorld -transform.position, transform.position);
         }
     }
 }

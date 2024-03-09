@@ -10,6 +10,8 @@ public class BulletPool : MonoBehaviour
     [SerializeField]
     int PoolSize;
     GameObject[] bulletPool;
+    [SerializeField]
+    Transform BulletParent;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,7 @@ public class BulletPool : MonoBehaviour
         bulletPool = new GameObject[PoolSize];
         for (int i = 0; i < PoolSize; i++)
         {
-            GameObject bulletObject = Instantiate(BulletPrefab,new Vector3(9999,9999,9999), Quaternion.identity);
+            GameObject bulletObject = Instantiate(BulletPrefab,new Vector3(9999,9999,9999),Quaternion.identity, BulletParent);
             bulletPool[i] = bulletObject;
             bulletObject.SetActive(false);
         }
