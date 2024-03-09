@@ -13,6 +13,10 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
     Rigidbody2D rigidbody2D;
     [SerializeField]
     Transform SpriteTransform;
+    [SerializeField]
+    int Damage;
+    [SerializeField]
+    LayerMask enemyLayerMask;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +26,13 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        Vector2 direction = playerObject.transform.position - transform.position;
-        rigidbody2D.velocity = direction.normalized * speed * Time.fixedDeltaTime;
-        RotateSprite(transform.position - playerObject.transform.position);
+        if (playerObject.activeInHierarchy)
+        {
+            Vector2 direction = playerObject.transform.position - transform.position;
+            rigidbody2D.velocity = direction.normalized * speed * Time.fixedDeltaTime;
+            RotateSprite(transform.position - playerObject.transform.position);
+        }
+
     }
 
     void RotateSprite(Vector2 direction)
@@ -32,5 +40,14 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
         float angle = Mathf.Atan2(direction.x, -direction.y) * Mathf.Rad2Deg;
         SpriteTransform.rotation = Quaternion.Euler(0,0,angle);
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            IDamage iDamage = collision.gameObject.GetComponent<IDamage>();
+            iDamage.Damage(Damage);
+        }
+    }
+
 
 }

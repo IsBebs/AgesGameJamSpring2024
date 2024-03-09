@@ -45,7 +45,7 @@ public class Spray : MonoBehaviour, IBullet
         LifeTimeTimer -= Time.fixedDeltaTime;
         Color tempColor = sprite.color;
         float alphaPercent = LifeTimeTimer / LifeTime;
-        tempColor.a = alphaPercent;
+        tempColor.a =  alphaPercent * 0.75f;
         sprite.color = tempColor;
 
         if (LifeTimeTimer < 0)
