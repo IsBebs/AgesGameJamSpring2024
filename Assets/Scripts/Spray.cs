@@ -19,6 +19,7 @@ public class Spray : MonoBehaviour, IBullet
     float LifeTimeTimer;
     [SerializeField]
     SpriteRenderer sprite;
+    
 
     public void SetBulletStartValues(Vector2 direction, Vector2 newPosition)
     {

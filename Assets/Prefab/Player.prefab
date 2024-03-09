@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 1629553529520132650, guid: f1d622af3b2cf2544b0c8d13ec56eb2f, type: 3}
   PoolSize: 100
-  BulletParent: {fileID: 0}
+  BulletParent: {fileID: 1629553529520132646, guid: f1d622af3b2cf2544b0c8d13ec56eb2f, type: 3}
 --- !u!114 &7946398438807871347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,6 +129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameCamera: {fileID: 0}
   PlayerBulletPool: {fileID: 7946398438807871346}
+  playerAmmo: {fileID: 2548920077817505881}
 --- !u!1 &7946398439707084344
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,6 +144,7 @@ GameObject:
   - component: {fileID: 7946398439707084346}
   - component: {fileID: 7946398439707084347}
   - component: {fileID: 7946398439707084350}
+  - component: {fileID: 2548920077817505881}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -282,3 +284,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   DamageInterVal: 1
+--- !u!114 &2548920077817505881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946398439707084344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c148e77e8331cb647b09bad5b5769a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startAmmo: 5
+  MaxAmmo: 10

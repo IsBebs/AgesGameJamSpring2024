@@ -8,13 +8,16 @@ public class PlayerShoot : MonoBehaviour
     Camera GameCamera;
     [SerializeField]
     BulletPool PlayerBulletPool;
+    [SerializeField]
+    PlayerAmmo playerAmmo;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && playerAmmo.Ammo >0)
         {
+            playerAmmo.Ammo--;
             Vector3 mousePos = Input.mousePosition;
             Vector3 mouseWorld = GameCamera.ScreenToWorldPoint(mousePos);
             GameObject bulletObject = PlayerBulletPool.GetNextObjectInPool();
