@@ -193,7 +193,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7998096313137071718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +209,10 @@ MonoBehaviour:
   speed: 5
   rigidbody2D: {fileID: 7998096313137071717}
   SpriteTransform: {fileID: 3434911646289680719}
+  Damage: 0
+  enemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!58 &7577130291476965605
 CircleCollider2D:
   m_ObjectHideFlags: 0
