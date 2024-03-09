@@ -106,7 +106,7 @@ MonoBehaviour:
   Damage: 3
   LifeTime: 5
   LifeTimeTimer: 1
-  sprite: {fileID: 1629553529520132647}
+  sprite: {fileID: 3776808057793626995}
 --- !u!50 &1629553529520132649
 Rigidbody2D:
   serializedVersion: 4
