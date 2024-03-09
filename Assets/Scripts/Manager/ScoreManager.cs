@@ -5,7 +5,7 @@ using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    int score;
+    int score=0;
     [SerializeField]
     GameObject playerObject;
     [SerializeField]
@@ -48,7 +48,7 @@ public class ScoreManager : MonoBehaviour
                 ScoreTimer = ScoreInterVal;
             }
         }
-        
+
     }
 
     // Start is called before the first frame update

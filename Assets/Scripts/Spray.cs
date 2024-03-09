@@ -19,6 +19,8 @@ public class Spray : MonoBehaviour, IBullet
     float LifeTimeTimer;
     [SerializeField]
     SpriteRenderer sprite;
+    int Combo =1;
+
     
 
     public void SetBulletStartValues(Vector2 direction, Vector2 newPosition)
@@ -26,6 +28,7 @@ public class Spray : MonoBehaviour, IBullet
         rigidbody2D.velocity = direction.normalized * speed;
         transform.position = newPosition;
         LifeTimeTimer = LifeTime;
+        Combo = 1;
     }
 
     // Start is called before the first frame update
@@ -37,6 +40,11 @@ public class Spray : MonoBehaviour, IBullet
         {
 
             iDamage.Damage(Damage);
+            if (iDamage.IsDead())
+            {
+                iDamage.SetCombo(Combo);
+                Combo++;
+            }
 
         }
     }
