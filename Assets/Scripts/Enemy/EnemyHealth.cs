@@ -6,32 +6,33 @@ public class EnemyHealth : MonoBehaviour, IDamage
 {
     Animator animator;
     private string currentState;
-    const string Enmy_Damage = "Damage";
-    const string Enmy_Walk = "BugWalking";
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
+    [SerializeField]
+    float DamageSpriteAlpha1;
+    [SerializeField]
+    float DamageSpriteAlpha2;
+    bool useDamageSpriteAlpha1 = true;
+    [SerializeField]
+    float DamageSpriteAlphaFlipTime;
+    float DamageSpriteAlphaFlipTimer = 0;
 
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-       
-    }
+    //const string Enmy_Damage = "Damage";
+    //const string Enmy_Walk = "BugWalking";
 
-    void ChangeAnimationState(string newState)
-    {
-        if (currentState == newState) return;
-        Debug.Log("Test");
-        currentState = newState;
-        animator.Play(newState); 
-    }
+
+
 
     float LastDamageTime = 0;
     [SerializeField]
     int health;
     [SerializeField]
     float DamageInterVal;
+    float DamageInterValTimmer;
     public void Damage(int damage)
     {
 
-        if (DamageInterVal < Time.time - LastDamageTime)
+        if (DamageInterValTimmer <=0)
         {
             
             health -= damage;
@@ -39,19 +40,35 @@ public class EnemyHealth : MonoBehaviour, IDamage
             {
                 Destroy(this.gameObject, 0.001f);
             }
-
-            ChangeAnimationState(Enmy_Damage);
             Debug.LogWarning("Damage");
             LastDamageTime = Time.time;
+            DamageInterValTimmer = DamageInterVal;
         }
-       
-
 
     }
 
-    public void PlayWalk()
+    private void Update()
     {
-        ChangeAnimationState(Enmy_Walk);
+        if (DamageInterValTimmer > 0)
+        {
+            DamageInterValTimmer -= Time.deltaTime;
+            DamageSpriteAlphaFlipTimer -= Time.deltaTime;
+            if (DamageSpriteAlphaFlipTimer <= 0)
+            {
+                DamageSpriteAlphaFlipTimer = DamageSpriteAlphaFlipTime;
+                Color tempColor = spriteRenderer.color;
+                useDamageSpriteAlpha1 = !useDamageSpriteAlpha1;
+                tempColor.a = useDamageSpriteAlpha1 ? DamageSpriteAlpha1 : DamageSpriteAlpha2;
+                spriteRenderer.color = tempColor;
+            }
+        }
+        else if(DamageInterValTimmer<=0 && spriteRenderer.color.a != 1)
+        {
+            Color tempColor = spriteRenderer.color;
+            tempColor.a = 1;
+            spriteRenderer.color = tempColor;
+
+        }
     }
-   
+
 }
