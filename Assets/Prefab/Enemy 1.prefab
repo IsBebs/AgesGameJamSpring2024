@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ef9cbc934d37e4e811d3a90e59ba3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 50
   rigidbody2D: {fileID: 7998096313137071717}
   SpriteTransform: {fileID: 3434911646289680719}
   Damage: 1
