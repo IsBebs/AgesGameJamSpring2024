@@ -33,4 +33,14 @@ public class PlayerHealth : MonoBehaviour, IDamage
         }
 
     }
+
+    public bool IsDead()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public bool SetCombo(int combo)
+    {
+        throw new System.NotImplementedException();
+    }
 }

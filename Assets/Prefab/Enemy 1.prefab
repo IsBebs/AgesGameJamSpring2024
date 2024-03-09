@@ -231,10 +231,7 @@ MonoBehaviour:
   speed: 5
   rigidbody2D: {fileID: 7998096313137071717}
   SpriteTransform: {fileID: 3434911646289680719}
-  Damage: 0
-  enemyLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
+  Damage: 1
 --- !u!58 &7577130291476965605
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -267,5 +264,7 @@ MonoBehaviour:
   DamageSpriteAlpha1: 0.5
   DamageSpriteAlpha2: 0.6
   DamageSpriteAlphaFlipTime: 0.15
+  CorpsePrefab: {fileID: 1335739268454251814, guid: 1209ebdac181eda48a20237255ae89c4, type: 3}
+  ChildSprite: {fileID: 3434911646289680719}
   health: 5
   DamageInterVal: 1

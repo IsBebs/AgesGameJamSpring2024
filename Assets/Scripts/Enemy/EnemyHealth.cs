@@ -16,6 +16,10 @@ public class EnemyHealth : MonoBehaviour, IDamage
     [SerializeField]
     float DamageSpriteAlphaFlipTime;
     float DamageSpriteAlphaFlipTimer = 0;
+    [SerializeField]
+    GameObject CorpsePrefab;
+    [SerializeField]
+    Transform ChildSprite;
 
     //const string Enmy_Damage = "Damage";
     //const string Enmy_Walk = "BugWalking";
@@ -47,6 +51,19 @@ public class EnemyHealth : MonoBehaviour, IDamage
 
     }
 
+    public bool IsDead()
+    {
+        return health <= 0;
+    }
+
+    public bool SetCombo(int combo)
+    {
+        GameObject corpse = Instantiate(CorpsePrefab, transform.position, Quaternion.identity);
+        EnemyCorpse enemyCorpse = corpse.GetComponent<EnemyCorpse>();
+        enemyCorpse.SetStartValues(combo, ChildSprite.transform.rotation);
+        return true;
+    }
+
     private void Update()
     {
         if (DamageInterValTimmer > 0)
@@ -57,6 +74,7 @@ public class EnemyHealth : MonoBehaviour, IDamage
             {
                 DamageSpriteAlphaFlipTimer = DamageSpriteAlphaFlipTime;
                 Color tempColor = spriteRenderer.color;
+                tempColor.r = 5;
                 useDamageSpriteAlpha1 = !useDamageSpriteAlpha1;
                 tempColor.a = useDamageSpriteAlpha1 ? DamageSpriteAlpha1 : DamageSpriteAlpha2;
                 spriteRenderer.color = tempColor;
@@ -66,6 +84,7 @@ public class EnemyHealth : MonoBehaviour, IDamage
         {
             Color tempColor = spriteRenderer.color;
             tempColor.a = 1;
+            tempColor.r = 1;
             spriteRenderer.color = tempColor;
 
         }

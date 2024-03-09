@@ -15,8 +15,7 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
     Transform SpriteTransform;
     [SerializeField]
     int Damage;
-    [SerializeField]
-    LayerMask enemyLayerMask;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +38,14 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
     {
         float angle = Mathf.Atan2(direction.x, -direction.y) * Mathf.Rad2Deg;
         SpriteTransform.rotation = Quaternion.Euler(0,0,angle);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            IDamage iDamage = collision.gameObject.GetComponent<IDamage>();
+            iDamage.Damage(Damage);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
