@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
         get { return score; }
         set 
         {
-            if (playerObject.activeInHierarchy)
+            if (playerObject != null && playerObject.activeInHierarchy)
             {
                 score = value;
                 ScoreText.text = $"Score:{score}";
@@ -39,7 +39,7 @@ public class ScoreManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (playerObject.activeInHierarchy)
+        if (playerObject != null && playerObject.activeInHierarchy)
         {
             ScoreTimer -= Time.fixedDeltaTime;
             if (ScoreTimer < 0)
