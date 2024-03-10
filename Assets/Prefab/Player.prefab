@@ -131,6 +131,8 @@ MonoBehaviour:
   GameCamera: {fileID: 0}
   PlayerBulletPool: {fileID: 7946398438807871346}
   playerAmmo: {fileID: 2548920077817505881}
+  audioClip: {fileID: 8300000, guid: 59cf95353a0c1f34fa3e093587dc9675, type: 3}
+  audioSource: {fileID: 590698108821016561}
 --- !u!95 &1518408822
 Animator:
   serializedVersion: 5
