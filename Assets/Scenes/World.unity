@@ -4936,6 +4936,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 678917403, guid: 1c4e8134d2f1ab544bae2770ae96142e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56.3498
+      objectReference: {fileID: 0}
+    - target: {fileID: 678917403, guid: 1c4e8134d2f1ab544bae2770ae96142e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -38.174927
+      objectReference: {fileID: 0}
     - target: {fileID: 1896221807548425241, guid: 1c4e8134d2f1ab544bae2770ae96142e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.00015258789
