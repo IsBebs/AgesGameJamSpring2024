@@ -859,6 +859,7 @@ GameObject:
   - component: {fileID: 3196876036629208647}
   - component: {fileID: 3196876036629208640}
   - component: {fileID: 5167186566312798180}
+  - component: {fileID: 2556768584479181284}
   m_Layer: 5
   m_Name: CanvasPrefab
   m_TagString: Untagged
@@ -966,6 +967,18 @@ MonoBehaviour:
   GameOverUI: {fileID: 6259387999263763395}
   GameOverText: {fileID: 727992403621303359}
   ScoreManager: {fileID: 0}
+--- !u!114 &2556768584479181284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196876036629208641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5565bacc73be2204781f0e587464bf59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3391427816741884122
 GameObject:
   m_ObjectHideFlags: 0
