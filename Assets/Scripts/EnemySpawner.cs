@@ -28,24 +28,33 @@ public class EnemySpawner : MonoBehaviour
     int difficulty = 0;
     [SerializeField]
     int Wave;
-
+    LayerMask EMask;
+    
     // Start is called before the first frame update
     void Start()
     {
-
+        
+        EMask = LayerMask.GetMask("Enemy");
     }
 
     // Update is called once per frame
     void Update()
     {
+       
+        
         if (Spawntimer == 60*Cooldown)
         {
            
             var position = new Vector3(Random.Range(NXCordinate, PXCordinate), Random.Range(lowerLimit.localPosition.y, upperLimit.localPosition.y), 0);
-            if (playerPosition.localPosition != position)
+
+            Collider2D colllider = (Physics2D.OverlapCircle(playerPosition.localPosition, 1, EMask));
+
+            if (!colllider)
             {
                 Instantiate(Enemy, position, Quaternion.identity);
             }
+            
+            
             
                 
             Spawntimer = 0;
