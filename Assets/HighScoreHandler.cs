@@ -16,7 +16,7 @@ public class HighScoreHandler : MonoBehaviour
     }
     public void CreateFileIfNotExist()
     {
-        if (File.Exists(filePath))
+        if (!File.Exists(filePath))
         {
             File.Create(filePath).Close();
             StreamWriter streamWriter = new StreamWriter(filePath);
