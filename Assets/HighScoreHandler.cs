@@ -43,8 +43,9 @@ public class HighScoreHandler : MonoBehaviour
     }
 
     // Update is called once per frame
-    void WriteHighScore(int newScore)
+    public void WriteHighScore(int newScore)
     {
+        CreateFileIfNotExist();
         StreamWriter streamWriter = new StreamWriter(filePath);
         streamWriter.Write(newScore);
         streamWriter.Close();
