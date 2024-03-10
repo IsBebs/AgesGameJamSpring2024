@@ -20,6 +20,10 @@ public class EnemyHealth : MonoBehaviour, IDamage
     GameObject CorpsePrefab;
     [SerializeField]
     Transform ChildSprite;
+    [SerializeField]
+    AudioClip[] audioClips;
+    [SerializeField]
+    AudioSource audioSource;
 
     //const string Enmy_Damage = "Damage";
     //const string Enmy_Walk = "BugWalking";
@@ -43,6 +47,11 @@ public class EnemyHealth : MonoBehaviour, IDamage
             if (health <= 0)
             {
                 Destroy(this.gameObject, 0.001f);
+            }
+            else
+            {
+                int randoomIndex = Random.Range(0,audioClips.Length);
+                audioSource.PlayOneShot(audioClips[randoomIndex]);
             }
             Debug.LogWarning("Damage");
             LastDamageTime = Time.time;

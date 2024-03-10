@@ -38,12 +38,14 @@ public class Spray : MonoBehaviour, IBullet
         IDamage iDamage = collision.gameObject.GetComponent<IDamage>();
         if(iDamage != null)
         {
-
-            iDamage.Damage(Damage);
-            if (iDamage.IsDead())
+            if (!iDamage.IsDead())
             {
-                iDamage.SetCombo(Combo);
-                Combo++;
+                iDamage.Damage(Damage);
+                if (iDamage.IsDead())
+                {
+                    iDamage.SetCombo(Combo);
+                    Combo++;
+                }
             }
 
         }

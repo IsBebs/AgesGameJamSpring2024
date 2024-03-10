@@ -12,6 +12,10 @@ public class EnemyCorpse : MonoBehaviour
     [SerializeField]
     TextMeshPro textMesh;
     GameObject gameManagerObject;
+    [SerializeField]
+    AudioSource AudioSource;
+    [SerializeField]
+    AudioClip[] AudioClips;
     public void SetStartValues(int combo, Quaternion childSpriteAngle)
     {
         gameManagerObject = GameObject.FindGameObjectWithTag("Managers");
@@ -24,7 +28,8 @@ public class EnemyCorpse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int randomIndex = Random.Range(0,AudioClips.Length);
+        AudioSource.PlayOneShot(AudioClips[randomIndex]);
     }
 
     // Update is called once per frame
