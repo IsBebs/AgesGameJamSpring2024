@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 312004774, guid: 1b97acc66a6cc0e4e84188dc644b0e76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -317,6 +317,7 @@ MonoBehaviour:
   DamageSpriteAlpha2: 0.6
   DamageSpriteAlphaFlipTime: 0.2
   spriteRenderer: {fileID: 7946398438807871348}
+  PlayerCorpsePrefab: {fileID: 7946398439707084344, guid: 3bff55513af486a4c8e6eae1bf9acef9, type: 3}
 --- !u!114 &2548920077817505881
 MonoBehaviour:
   m_ObjectHideFlags: 0

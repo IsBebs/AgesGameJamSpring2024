@@ -27,6 +27,8 @@ public class PlayerHealth : MonoBehaviour, IDamage
     float DamageSpriteAlphaFlipTimer = 0;
     [SerializeField]
     SpriteRenderer spriteRenderer;
+    [SerializeField]
+    GameObject PlayerCorpsePrefab;
 
     private void Start()
     {
@@ -42,6 +44,8 @@ public class PlayerHealth : MonoBehaviour, IDamage
             HealthText.text = $"Health:{health}";
             if (health <= 0)
             {
+                GameObject playerCorpse = Instantiate(PlayerCorpsePrefab, transform.position, Quaternion.identity);
+                playerCorpse.GetComponent<PlayerCorpse>().SetStartValues(spriteRenderer.transform.rotation);
                 gameObject.SetActive(false);
             }
             else
