@@ -228,7 +228,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: -1460}
-  m_SizeDelta: {x: 979.5, y: 2905.51}
+  m_SizeDelta: {x: 950, y: 2905.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605286753
 MonoBehaviour:
@@ -256,30 +256,30 @@ MonoBehaviour:
     Sunday morning a call came into the station. A young boy crying, saying that
     a monster had eaten his mother before the line went dead. A prank call Thomas
     thought at first but as more and more calls came in, his confusion turned to
-    worry\r\nAll calls had originated from the small town of Virginia City, Thomas\xB4s
+    worry\r\nAll calls had originated from the small town of Virginia City, \n\nThomas\xB4s
     hometown. Fear for his family's safety turned his despair to courage as he dove
-    into his patrol car and headed towards town. \r\nBy the time Thomas\xB4s car
+    into his patrol car and headed towards town. \r\n\nBy the time Thomas\xB4s car
     parked outside the Virginia City laundromat it was dead quiet except the winds
     carrying in sand from the nearby desert to litter the empty roads. Just then
     Thomas heard a wet and crunchy noise, sounding like somebody took their first
-    bite from a hamburger. \r\nBut it was not a hamburger joint the officer saw when
-    he looked behind the back of the laundromat. That boy from the phone, dead, with
-    a giant monster chowing down on his guts like a regular at a chinese buffet.
+    bite from a hamburger. \r\n\nBut it was not a hamburger joint the officer saw
+    when he looked behind the back of the laundromat. That boy from the phone, dead,
+    with a giant monster chowing down on his guts like a regular at a chinese buffet.
     Horrified, Thomas dashed to his car to call for backup but the monster was right
     behind him. It looked like a thousand legged pillbug with a shell hard like reinforced
-    steel. And it was big, like human sized big. \r\nThomas opened the trunk of his
-    car, dove his hand into a grocery bag and pulled out a can of bug spray. Not
-    the ordinary kind, but the kind of shit the FDA pulled off the shelfs due to
-    health risks. The giant insect charged right at him just as he aimed the nozzle
+    steel. And it was big, like human sized big. \r\n\nThomas opened the trunk of
+    his car, dove his hand into a grocery bag and pulled out a can of bug spray.
+    Not the ordinary kind, but the kind of shit the FDA pulled off the shelfs due
+    to health risks. The giant insect charged right at him just as he aimed the nozzle
     and fired off a cloud of insecticide right at the monster. It began to walk funny,
-    cry out in pain and fall over stone dead.\r\nBut poor Thomas could not sigh in
-    relief just yet as the dying cries of the pillbug attracted a whole hoard of
-    meat eating motherfuckers. \r\nThomas closed his eyes and prayed. Prayed that
-    there was enough bug spray to go around for everyone of\u2026 THE MAN EATING
+    cry out in pain and fall over stone dead.\r\n\nBut poor Thomas could not sigh
+    in relief just yet as the dying cries of the pillbug attracted a whole hoard
+    of meat eating motherfuckers. \r\n\nThomas closed his eyes and prayed. Prayed
+    that there was enough bug spray to go around for everyone of\u2026 THE MAN EATING
     BUGS FROM OUTER SPACE!!!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7fcd2b6428de395418c9f15003b0fac0, type: 2}
+  m_sharedMaterial: {fileID: 314149243002547045, guid: 7fcd2b6428de395418c9f15003b0fac0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -303,17 +303,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -15
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -562,8 +562,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
-  m_SizeDelta: {x: 322.33, y: 50}
+  m_AnchoredPosition: {x: -0.0001, y: 20}
+  m_SizeDelta: {x: 400, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1037753610
 GameObject:
@@ -598,10 +598,10 @@ RectTransform:
   m_Father: {fileID: 993838463}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 322.33, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -9}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1037753612
 MonoBehaviour:
@@ -625,8 +625,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Click to Continue '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7fcd2b6428de395418c9f15003b0fac0, type: 2}
+  m_sharedMaterial: {fileID: 314149243002547045, guid: 7fcd2b6428de395418c9f15003b0fac0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -650,17 +650,17 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -15
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
