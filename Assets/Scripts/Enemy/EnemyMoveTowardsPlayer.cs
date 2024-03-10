@@ -25,7 +25,7 @@ public class EnemyMoveTowardsPlayer : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        if (playerObject.activeInHierarchy)
+        if (playerObject != null && playerObject.activeInHierarchy)
         {
             Vector2 direction = playerObject.transform.position - transform.position;
             rigidbody2D.velocity = direction.normalized * speed * Time.fixedDeltaTime;
