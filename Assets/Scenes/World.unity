@@ -432,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7946398439707084350, guid: 64d8e4d89ad66664b8c1808d1b81f9aa, type: 3}
       propertyPath: health
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7946398439707084350, guid: 64d8e4d89ad66664b8c1808d1b81f9aa, type: 3}
       propertyPath: HealthText
@@ -2221,9 +2221,9 @@ MonoBehaviour:
   upperLimit: {fileID: 231324322}
   lowerLimit: {fileID: 987742382}
   playerPosition: {fileID: 2096560856}
-  Enemy2SpawnTime: 20
-  Enemy3SpawnTime: 40
-  CoolDownReduceTime: 15
+  Enemy2SpawnTime: 25
+  Enemy3SpawnTime: 50
+  CoolDownReduceTime: 20
   CoolDownReduce: 0.25
   Wave: 60
 --- !u!4 &1601259568

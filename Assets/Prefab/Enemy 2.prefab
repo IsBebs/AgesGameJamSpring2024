@@ -232,7 +232,7 @@ MonoBehaviour:
   speed: 100
   rigidbody2D: {fileID: 7998096313137071717}
   SpriteTransform: {fileID: 3434911646289680719}
-  Damage: 3
+  Damage: 2
 --- !u!58 &7577130291476965605
 CircleCollider2D:
   m_ObjectHideFlags: 0

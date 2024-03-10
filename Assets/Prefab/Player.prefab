@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01fd1a31e7e0b674492a87da9a07d0e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5000
+  speed: 4000
 --- !u!58 &7946398439707084347
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb0aa18932557f41b58b36c783d3235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 5
   DamageInterVal: 1
   HealthText: {fileID: 0}
   audioSource: {fileID: 590698108821016561}
